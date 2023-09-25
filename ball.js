@@ -18,7 +18,6 @@ class Ball {
     circle(this.xpos, this.ypos, this.rad);
   }
   move() {
-    
     this.yvel += gravity;
     this.ypos += this.yvel;
     this.xpos += this.xvel;
@@ -31,17 +30,17 @@ class Ball {
         this.xvel -= 0.05;
       }
       // energy loss from collision
-      if (this.yvel > 0){
-        this.yvel -= 2
+      if (this.yvel > 0) {
+        this.yvel -= 2;
       }
-      
+
       this.yvel = invert(this.yvel);
       this.ypos = height - this.rad / 2;
     }
     if (this.ypos <= 0 + this.rad / 2) {
       // energy loss from collision
-      if (this.yvel > 0){
-        this.yvel -= 2
+      if (this.yvel > 0) {
+        this.yvel -= 2;
       }
       this.yvel = invert(this.yvel);
       this.ypos = 0 + this.rad / 2;
@@ -55,8 +54,8 @@ class Ball {
       this.xpos = width - this.rad / 2;
     }
     if (this.xpos <= 0 + this.rad / 2) {
+      // energy loss from collision
       if (this.xvel > 0) {
-        // energy loss from collision
         this.xvel -= 2;
       }
       this.xvel = invert(this.xvel);

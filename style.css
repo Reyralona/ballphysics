@@ -6,10 +6,25 @@ body{
   width: 100vw;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 10px;
   background-color: black;
 }
 canvas {
   border: 1px solid white;
+}
+
+.buttontray button{
+  border: none;
+  padding: 10px;
+  color: white;
+  background-color: dodgerblue;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.buttontray button:hover{
+  cursor: pointer;
+  background-color: rgb(62, 106, 163);
 }
